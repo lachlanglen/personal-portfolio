@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<h1 style='padding-top:20px'>Projects</h1>
+<div>
+  <h5 style='padding-top:20px; padding-bottom:20px'><i>In addition to the following projects, this stunning website was
+      also built by
+      Lachlan,
+      using Django &
+      Python.</i>
+  </h5>
+</div>
+<div style='padding-bottom:20px' class="row">
+  {% for project in projects %}
+  <div class="col-md-4">
+    <div class="card mb-2">
+      <img class="card-img-top" src="{% static project.image %}">
+      <div class="card-body">
+        <h5 style='text-transform: uppercase' class="card-title">{{ project.title }}</h5>
+        <p class="card-text">{{ project.shortDescription }}</p>
+        <a href="{% url 'project_detail' project.pk %}" class="btn btn-primary">
+          Read More
+        </a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
