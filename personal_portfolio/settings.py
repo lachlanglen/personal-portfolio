@@ -29,7 +29,7 @@ ALLOWED_HOSTS = [
     'lachlan-glen-portfolio.herokuapp.com',
     '192.168.1.27',
     'localhost',
-    'lachlanglenportfolio.com'
+    '.lachlanglenportfolio.com'
 ]
 
 
